@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-neutral-900 text-white antialiased;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+  @media (prefers-color-scheme: light) {
+    body {
+      @apply bg-white text-slate-900;
+    }
+  }
+}
