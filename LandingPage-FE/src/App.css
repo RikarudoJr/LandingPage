@@ -5,10 +5,10 @@
   text-align: center;
 }
 
-/* ensure white background and dark default text */
+
 body {
   background: #ffffff;
-  color: #0f172a; /* slate-900 */
+  color: #0f172a;
 }
 
 .logo {
