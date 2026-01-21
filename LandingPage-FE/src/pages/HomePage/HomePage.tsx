@@ -3,13 +3,21 @@ import whatsappIcon from '../../assets/waIcon.svg'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Susu from '../../assets/susu.jpeg'
-import devi from '../../assets/devi.jpeg'
-import gede from '../../assets/gede.jpeg'
-import nengah from '../../assets/nengah.jpeg'
-import wilmina from '../../assets/wilmina.jpeg'
-import yusnani from '../../assets/yusnani.jpeg'
 
-const pictures = [devi, gede, nengah, wilmina, yusnani];
+import devi from '../../assets/testimoni/devi.jpeg'
+import gede from '../../assets/testimoni/gede.jpeg'
+import nengah from '../../assets/testimoni/nengah.jpeg'
+import wilmina from '../../assets/testimoni/wilmina.jpeg'
+import yusnani from '../../assets/testimoni/yusnani.jpeg'
+
+import sahur from '../../assets/manfaat/sahur.jpeg'
+import pencernaan from '../../assets/manfaat/pencernaan.jpeg'
+import puasa from '../../assets/manfaat/puasa.jpeg'
+import dha from '../../assets/manfaat/dha.jpeg'
+import caraKerja from '../../assets/cara_kerja.jpeg'
+
+const testimoni = [devi, gede, nengah, wilmina, yusnani];
+const manfaat = [sahur, pencernaan, puasa, dha];
 
 const HomePage: React.FC = () => {
    return (
@@ -20,8 +28,8 @@ const HomePage: React.FC = () => {
     <section className="bg-sky-100">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
-          <p className="text-sm uppercase tracking-wider text-sky-600">C2FAST</p>
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-slate-900">
+          <p className="text-3xl font-extrabold uppercase tracking-wider text-sky-600">Yeobo Colostrum Milk</p>
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight text-slate-900">
               Rahasia Awet Muda dan Panjang Usia 
           </h1>
           <p className="mt-2 text-lg text-slate-700 max-w-lg">
@@ -41,11 +49,37 @@ const HomePage: React.FC = () => {
         </div>
       </div>
     </section>
+    <section>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+
+      </div>
+    </section>
+    <section className="w-full bg-gradient-to-b from-white to-sky-50 py-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">
+          Manfaat Yeobo Colostrum Milk
+        </h2>
+        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          Nikmati berbagai manfaat kesehatan dari susu kolostrum kami
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-start">
+          {manfaat.map((src, idx) => (
+            <div key={idx} className="w-full flex items-center justify-center">
+              <img
+                src={src}
+                alt={`manfaat ${idx + 1}`}
+                className="w-full h-auto object-contain rounded-lg shadow-lg"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
     <section className="w-full border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 py-12">
         <h2 className="text-2xl font-semibold text-slate-900 mb-6">Testimoni</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
-          {pictures.map((src, idx) => (
+          {testimoni.map((src, idx) => (
             <div key={idx} className="w-full flex items-center justify-center">
               <img
                 src={src}
@@ -57,15 +91,35 @@ const HomePage: React.FC = () => {
         </div>
       </div>
     </section>
-  </main>
+    </main>
+    <section className="w-full bg-gradient-to-b from-sky-50 to-white py-16">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">
+          Membership
+        </h2>
+        <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+          Bergabunglah dengan sistem keanggotaan kami dan nikmati berbagai keuntungan
+        </p>
+        
+        <div className="flex justify-center mb-8">
+          <img
+            src={caraKerja}
+            alt="Cara Kerja Membership"
+            className="w-full max-w-4xl h-auto object-contain rounded-lg shadow-xl"
+          />
+        </div>
 
+        </div>
+    </section>
     <section className="w-full">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 py-6">
         <div className="flex flex-col items-start gap-4">
-          <h2 className="text-2xl font-semibold text-slate-900">Hubungi Kami</h2>
-
+          <h2 className="text-2xl font-bold text-slate-900">Hubungi Kami</h2>
+          <div className="flex text-base font-semibold">
+            <h2>Dapatkan informasi lebih lanjut disini</h2>
+          </div>
           <a
-            href="https://wa.me/6281283822163?text=Halo%2C%20saya%20tertarik%20untuk%20join%20member%21"
+            href="https://wa.me/6281369459077?text=Halo%2C%20saya%20tertarik%20untuk%20join%20member%21"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#20b65a] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-semibold shadow-lg transition transform hover:scale-105"
@@ -79,7 +133,7 @@ const HomePage: React.FC = () => {
     </section>
           
         <Footer />
-      </div>
+    </div>
 	  )
 	}
  
