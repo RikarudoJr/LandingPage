@@ -9,6 +9,7 @@ import gede from '../../assets/testimoni/gede.jpeg'
 import nengah from '../../assets/testimoni/nengah.jpeg'
 import wilmina from '../../assets/testimoni/wilmina.jpeg'
 import yusnani from '../../assets/testimoni/yusnani.jpeg'
+import kata_mereka from '../../assets/testimoni/kata_mereka.mp4'
 
 import sahur from '../../assets/manfaat/sahur.jpeg'
 import pencernaan from '../../assets/manfaat/pencernaan.jpeg'
@@ -49,9 +50,16 @@ const HomePage: React.FC = () => {
         </div>
       </div>
     </section>
-    <section>
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
-
+    <section className="w-full bg-gradient-to-b from-white to-sky-50">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 py-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-4">
+              Apa itu Yeobo Colostrum Milk? 
+          </h2>
+          <p className="text-2xl text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+              Yeobo Colostrum Milk adalah susu yang dibuat dari kolostrum. Kolostrum adalah 
+              kandungan dalam susu pertama yang dilahirkan dan tidak berlangsung lama dan telah 
+              digunakan orang dewasa sejak lebih dari ratusan tahun.
+          </p>
       </div>
     </section>
     <section className="w-full bg-gradient-to-b from-white to-sky-50 py-16">
@@ -79,6 +87,14 @@ const HomePage: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-8 py-12">
         <h2 className="text-2xl font-semibold text-slate-900 mb-6">Testimoni</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
+          <div className="w-full flex items-center justify-center">
+            <video
+              controls
+              className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-contain rounded-lg border bg-slate-50 shadow"
+            >
+              <source src={kata_mereka} type="video/mp4" />
+            </video>
+          </div>
           {testimoni.map((src, idx) => (
             <div key={idx} className="w-full flex items-center justify-center">
               <img
@@ -108,8 +124,7 @@ const HomePage: React.FC = () => {
             className="w-full max-w-4xl h-auto object-contain rounded-lg shadow-xl"
           />
         </div>
-
-        </div>
+      </div>
     </section>
     <section className="w-full">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 py-6">
