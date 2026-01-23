@@ -10,6 +10,9 @@ import nengah from '../../assets/testimoni/nengah.jpeg'
 import wilmina from '../../assets/testimoni/wilmina.jpeg'
 import yusnani from '../../assets/testimoni/yusnani.jpeg'
 import kata_mereka from '../../assets/testimoni/kata_mereka.mp4'
+import testi_novi from '../../assets/testimoni/testi_novi.jpeg'
+import anak from '../../assets/testimoni/anak.jpeg'
+import palembang from '../../assets/testimoni/palembang.jpeg'
 
 import sahur from '../../assets/manfaat/sahur.jpeg'
 import pencernaan from '../../assets/manfaat/pencernaan.jpeg'
@@ -17,7 +20,7 @@ import puasa from '../../assets/manfaat/puasa.jpeg'
 import dha from '../../assets/manfaat/dha.jpeg'
 import caraKerja from '../../assets/cara_kerja.jpeg'
 
-const testimoni = [devi, gede, nengah, wilmina, yusnani];
+const testimoni = [devi, gede, nengah, wilmina, yusnani, testi_novi, anak, palembang];
 const manfaat = [sahur, pencernaan, puasa, dha];
 
 const HomePage: React.FC = () => {
