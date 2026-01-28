@@ -25,7 +25,8 @@ const manfaat = [sahur, pencernaan, puasa, dha];
 
 const contacts = {
   ully: { phone: '6281283822163', name: 'Ully' },
-  armiyati: { phone: '6281369459077', name: 'Armiyati' }
+  armiyati: { phone: '6281369459077', name: 'Armiyati' },
+  dewi: { phone: '6285857527865', name: 'Dewi' }
 };
 
 // Change this to 'ully' or 'armiyati' to switch between contacts
