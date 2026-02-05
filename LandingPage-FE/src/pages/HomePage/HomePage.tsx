@@ -1,7 +1,7 @@
 import React from 'react'
 import whatsappIcon from '../../assets/waIcon.svg'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 import Susu from '../../assets/susu.jpeg'
 
 import devi from '../../assets/testimoni/devi.jpeg'
@@ -26,7 +26,8 @@ const manfaat = [sahur, pencernaan, puasa, dha];
 const contacts = {
   ully: { phone: '6281283822163', name: 'Ully' },
   armiyati: { phone: '6281369459077', name: 'Armiyati' },
-  dewi: { phone: '6285857527865', name: 'Dewi' }
+  dewi: { phone: '6285857527865', name: 'Dewi' },
+  asmunah: { phone: '6287897176825', name: 'Asmunah' }
 };
 
 // Change this to 'ully' or 'armiyati' to switch between contacts
