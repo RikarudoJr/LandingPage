@@ -2,6 +2,7 @@ import React from 'react'
 import whatsappIcon from '../../assets/waIcon.svg'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import Button from '../../components/Button/Button'
 import Susu from '../../assets/susu.jpeg'
 
 import devi from '../../assets/testimoni/devi.jpeg'
@@ -27,7 +28,9 @@ const contacts = {
   ully: { phone: '6281283822163', name: 'Ully' },
   armiyati: { phone: '6281369459077', name: 'Armiyati' },
   dewi: { phone: '6285857527865', name: 'Dewi' },
-  asmunah: { phone: '6287897176825', name: 'Asmunah' }
+  asmunah: { phone: '6287897176825', name: 'Asmunah' },
+  andri: { phone: '6281367102623', name: 'Pak Andri' }
+
 };
 
 // Change this to 'ully' or 'armiyati' to switch between contacts
@@ -162,16 +165,18 @@ const HomePage: React.FC<HomePageProps> = ({ waNumber, agentName }) => {
                 <h2>Dapatkan informasi lebih lanjut disini</h2>
               </div>
 
-              <a
+              <Button
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center gap-4 bg-[#25D366] hover:bg-[#20b65a] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-lg font-semibold shadow-lg transition transform hover:scale-105"
-                aria-label="Chat on WhatsApp"
+                variant="whatsapp"
+                size="lg"
+                className="w-full sm:w-auto"
+                ariaLabel="Chat on WhatsApp"
               >
                 <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />
                 <span>Chat on WhatsApp</span>
-              </a>
+              </Button>
             </div>
           </div>
         </section>
