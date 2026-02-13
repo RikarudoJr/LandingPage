@@ -109,7 +109,7 @@ const HomePage: React.FC<HomePageProps> = ({ waNumber, agentName }) => {
           </div>
         </section>
 
-        <section className="w-full border-t border-slate-100">
+        <section id = "testimonial" className="w-full border-t border-slate-100">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 py-12">
             <h2 className="text-2xl font-semibold text-slate-900 mb-6">Testimoni</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">

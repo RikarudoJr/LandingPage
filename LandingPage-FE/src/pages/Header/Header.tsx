@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/logo-removebg-preview.png'
+import {Link} from 'react-scroll'
 
 const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -19,6 +20,7 @@ const Header: React.FC = () => {
           </button>
 
           <img src={Logo} alt="NeoLifeSg" className="h-10 md:h-14 lg:h-16 object-contain" />
+          <Link to="testimonial" smooth={true}>testimonial</Link>
         </div>
 
       </div>
