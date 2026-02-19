@@ -46,3 +46,13 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+.sidebar{
+  z-index: 999;
+  background-color:white;
+  position:fixed;
+  
+  left:0;
+  width: 50%;
+  height: 100vh;
+}

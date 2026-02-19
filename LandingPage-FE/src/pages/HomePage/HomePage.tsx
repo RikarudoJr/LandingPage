@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import whatsappIcon from '../../assets/waIcon.svg'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -20,7 +20,7 @@ import pencernaan from '../../assets/manfaat/pencernaan.jpeg'
 import puasa from '../../assets/manfaat/puasa.jpeg'
 import dha from '../../assets/manfaat/dha.jpeg'
 import caraKerja from '../../assets/cara_kerja.jpeg'
-
+import Sidebar from '../../components/Sidebar/Sidebar'
 const testimoni = [devi, gede, nengah, wilmina, yusnani, testi_novi, anak, palembang];
 const manfaat = [sahur, pencernaan, puasa, dha];
 
@@ -47,12 +47,15 @@ const HomePage: React.FC<HomePageProps> = ({ waNumber, agentName }) => {
     : contacts[CONTACT_PERSON];
   
   const whatsappLink = `https://wa.me/${contact.phone}?text=Halo%2C%20saya%20tertarik%20untuk%20join%20member%21`;
-
+  const [mobileOpen, setMobileOpen] = useState(false)
+  
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900">
-      <Header />
+    <>
 
+    <div className="min-h-screen flex flex-col bg-white text-slate-900">
+      <Header onClick = {()=> setMobileOpen(!mobileOpen)} />
       <main className="flex-1">
+        {mobileOpen && <Sidebar/>}
         <section className="bg-sky-100">
           <div className="max-w-6xl mx-auto px-6 sm:px-8 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -184,6 +187,7 @@ const HomePage: React.FC<HomePageProps> = ({ waNumber, agentName }) => {
           
       <Footer />
     </div>
+    </>
   )
 }
  

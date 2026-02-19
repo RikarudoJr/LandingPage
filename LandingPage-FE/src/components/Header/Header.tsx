@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Logo from '../../assets/logo-removebg-preview.png'
-
-const Header: React.FC = () => {
-  const [mobileOpen, setMobileOpen] = useState(false)
+import {Link} from 'react-scroll'
+import Sidebar from '../Sidebar/Sidebar'
+interface HeaderProps {
+  onClick: () => void;
+}
+const Header: React.FC<HeaderProps> = ({onClick}) => {
 
   return (
     <header className="w-full border-b border-slate-100 bg-white">
@@ -11,19 +14,23 @@ const Header: React.FC = () => {
           <button
             aria-label="Open menu"
             className="md:hidden p-2 rounded-md hover:bg-slate-100"
-            onClick={() => setMobileOpen(!mobileOpen)}
+            onClick= {onClick}
           >
             <div className="w-5 h-0.5 bg-slate-700 mb-1" />
             <div className="w-5 h-0.5 bg-slate-700 mb-1" />
             <div className="w-5 h-0.5 bg-slate-700" />
+
           </button>
+          
 
           <img src={Logo} alt="NeoLifeSg" className="h-10 md:h-14 lg:h-16 object-contain" />
+          
         </div>
 
       </div>
 
     </header>
+
   )
 }
 
